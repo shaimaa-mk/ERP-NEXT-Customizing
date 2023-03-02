@@ -1,4 +1,5 @@
-import frappe
+# Copyright (c) 2023, Shaima'a Khashan and contributors
+# For license information, please see license.txt
 from frappe.utils.data import time_diff_in_hours
 
 

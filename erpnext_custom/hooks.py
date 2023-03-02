@@ -97,6 +97,9 @@ app_license = "MIT"
 # override_doctype_class = {
 #	"ToDo": "custom_app.overrides.CustomToDo"
 # }
+override_doctype_class = {
+    "Sales Invoice": "erpnext_custom.erpnext_customization_tasks.overrides.override_sales_invoice.CustomSalesInvoice"
+}
 
 # Document Events
 # ---------------
@@ -111,15 +114,20 @@ app_license = "MIT"
 # }
 
 doc_events = {
-    "Attendance":
-        {
-            "validate": "erpnext_custom.erpnext_customization_tasks.doc_events.attendance.get_status",
-            "on_submit": "erpnext_custom.erpnext_customization_tasks.doc_events.attendance.get_hours"
-        },
+    # "Attendance":
+    #     {
+    #         "validate": "erpnext_custom.erpnext_customization_tasks.doc_events.attendance.get_status",
+    #         "on_submit": "erpnext_custom.erpnext_customization_tasks.doc_events.attendance.get_hours"
+    #     },
     "Employee":
         {
             "validate": "erpnext_custom.erpnext_customization_tasks.doc_events.employee.validate_create_task"
         }
+    # "Employee Checkin":
+    #     {
+    #         "validate": "hrms.hr.doctype.employee_checkin.employee_checkin.validate"
+    #     }
+
 }
 # Scheduled Tasks
 # ---------------
